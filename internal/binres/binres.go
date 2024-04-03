@@ -260,7 +260,7 @@ func UnmarshalXML(r io.Reader, withIcon bool) (*XML, error) {
 				// 		Value: "4.1.2-1425332",
 				// 	})
 
-				// q = append(q, ltoken{tkn, line})
+				q = append(q, ltoken{tkn, line})
 
 				if !skipSynthesize {
 					s := xml.StartElement{
