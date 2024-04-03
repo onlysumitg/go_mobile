@@ -20,6 +20,7 @@ import (
 )
 
 func goAndroidBind(gobind string, pkgs []*packages.Package, targets []targetInfo) error {
+	binres.MinSDK = buildAndroidAPI
 	if _, err := sdkpath.AndroidHome(); err != nil {
 		return fmt.Errorf("this command requires the Android SDK to be installed: %w", err)
 	}
