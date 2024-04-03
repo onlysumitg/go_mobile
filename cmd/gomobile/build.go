@@ -168,10 +168,10 @@ func runBuildImpl(cmd *command) (*packages.Package, error) {
 		}
 	}
 
-	if !nmpkgs["github.com/onlysumitg/go_mobile/app"] {
-		return nil, fmt.Errorf(`%s does not import "github.com/onlysumitg/go_mobile/app"`, pkg.PkgPath)
-	}
-
+	// if !nmpkgs["github.com/onlysumitg/go_mobile/app"] {
+	// 	return nil, fmt.Errorf(`%s does not import "github.com/onlysumitg/go_mobile/app"`, pkg.PkgPath)
+	// }
+	fmt.Println("nmpkgs", nmpkgs)
 	return pkg, nil
 }
 
