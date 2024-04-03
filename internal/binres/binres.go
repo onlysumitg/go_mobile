@@ -240,27 +240,27 @@ func UnmarshalXML(r io.Reader, withIcon bool) (*XML, error) {
 			switch tkn.Name.Local {
 			default:
 				q = append(q, ltoken{tkn, line})
-			case "uses-sdk":
-				return nil, fmt.Errorf("manual declaration of uses-sdk in AndroidManifest.xml not supported")
+			//case "uses-sdk":
+			//	return nil, fmt.Errorf("manual declaration of uses-sdk in AndroidManifest.xml not supported")
 			case "manifest":
 				// synthesize additional attributes and nodes for use during encode.
-				tkn.Attr = append(tkn.Attr,
-					xml.Attr{
-						Name: xml.Name{
-							Space: "",
-							Local: "platformBuildVersionCode",
-						},
-						Value: "16",
-					},
-					xml.Attr{
-						Name: xml.Name{
-							Space: "",
-							Local: "platformBuildVersionName",
-						},
-						Value: "4.1.2-1425332",
-					})
+				// tkn.Attr = append(tkn.Attr,
+				// 	xml.Attr{
+				// 		Name: xml.Name{
+				// 			Space: "",
+				// 			Local: "platformBuildVersionCode",
+				// 		},
+				// 		Value: "16",
+				// 	},
+				// 	xml.Attr{
+				// 		Name: xml.Name{
+				// 			Space: "",
+				// 			Local: "platformBuildVersionName",
+				// 		},
+				// 		Value: "4.1.2-1425332",
+				// 	})
 
-				q = append(q, ltoken{tkn, line})
+				// q = append(q, ltoken{tkn, line})
 
 				if !skipSynthesize {
 					s := xml.StartElement{
