@@ -14,6 +14,7 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/onlysumitg/go_mobile/internal/binres"
 	"github.com/onlysumitg/go_mobile/internal/sdkpath"
 	"golang.org/x/sync/errgroup"
 	"golang.org/x/tools/go/packages"
