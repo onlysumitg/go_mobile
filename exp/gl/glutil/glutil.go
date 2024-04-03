@@ -4,13 +4,13 @@
 
 //go:build darwin || linux || windows
 
-package glutil // import "golang.org/x/mobile/exp/gl/glutil"
+package glutil // import "github.com/onlysumitg/go_mobile/exp/gl/glutil"
 
 import (
 	"fmt"
 
-	"golang.org/x/mobile/exp/f32"
-	"golang.org/x/mobile/gl"
+	"github.com/onlysumitg/go_mobile/exp/f32"
+	"github.com/onlysumitg/go_mobile/gl"
 )
 
 // CreateProgram creates, compiles, and links a gl.Program.

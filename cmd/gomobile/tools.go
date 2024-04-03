@@ -5,5 +5,5 @@
 package main
 
 import (
-	_ "golang.org/x/mobile/cmd/gobind"
+	_ "github.com/onlysumitg/go_mobile/cmd/gobind"
 )

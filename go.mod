@@ -1,4 +1,4 @@
-module golang.org/x/mobile
+module github.com/onlysumitg/go_mobile
 
 go 1.18
 
